@@ -1,39 +1,35 @@
 <template>
-    <b-container>
-        <nav-bar
-          :propOne="this.propOne"
-          :propTwo="this.propTwo"
-          @open-main="openMain"
-          @open-resume="openResume"
-          @open-projects="openProjects"
-        />
-      <transition-group name="fade">
-        <main-page v-if="showMain" :testProp="this.propOne" key="dynamic" class="animated"/>
+    <b-container id="vueBody">
+      <b-img id="headerImage" class="img-fluid w-100" :src="require('./assets/images/mmbRange.jpg')"></b-img>
 
-        <resume v-if="showResume" :testProp="this.propTwo" key="dynamic" class="animated"/>
 
-        <projects v-if="showProjects" key="dynamic" class="animated"/>
-      </transition-group>
+      <b-list-group horizontal id="navBar">
+        <b-button @click="openMain"
+                           class="text-center" button>
+          Home
+        </b-button>
+        <b-button @click="openEducation"
+                           class="text-center" button>
+          Education & Skills
+        </b-button>
+        <b-button @click="openExperience"
+                  class="text-center" button>
+          Experience
+        </b-button>
+        <b-button @click="openProjects"
+                           class="text-center" button>
+          Projects
+        </b-button>
+      </b-list-group>
 
+      <router-view id="routerContent"></router-view>
     </b-container>
 </template>
 
 <script>
-import NavBar from './components/NavBar.vue';
-import MainPage from './components/MainPage.vue';
-import Resume from './components/Resume.vue';
-import Projects from './components/Projects.vue';
-
 export default
 {
   name: 'app',
-  components:
-        {
-          NavBar,
-          MainPage,
-          Resume,
-          Projects,
-        },
   data() {
     return {
       showMain: true,
@@ -46,46 +42,63 @@ export default
   methods:
         {
           openMain() {
-            this.showMain = true;
-            this.showResume = false;
-            this.showProjects = false;
+            this.$router.push('home');
           },
-          openResume() {
-            this.showMain = false;
-            this.showResume = true;
-            this.showProjects = false;
+          openEducation() {
+            this.$router.push('education');
+          },
+          openExperience() {
+            this.$router.push('experience');
           },
           openProjects() {
-            this.showMain = false;
-            this.showResume = false;
-            this.showProjects = true;
+            this.$router.push('projects');
           },
         },
 };
 </script>
 
 <style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+  /*Body Styles*/
+  .card
+  {
+    margin-top: 1%;
+    margin-bottom: 1%;
+    box-shadow: 3px 3px 8px;
 
-.fade-enter,
-.fade-leave-active {
-  opacity: 0;
-  transform: translateY(-10px);
-}
-.fade-leave-active {
-  position: absolute;
-}
+  }
+  h3
+  {
+    font-size: 1.1rem;
+  }
+  body
+  {
+    background-color: #3b78b3;
+  }
+  #vueBody
+  {
+    background-color: lightgrey;
+    padding: 0;
+    padding-bottom: 1%;
+  }
 
-.animated {
-  transition: all 0.5s;
-  /*display: flex;*/
-  width: 100%;
-}
+  /*Nav Bar Styles*/
+  #navBar
+  {
+    justify-content: center;
+  }
+  #navBar > button
+  {
+    flex-grow: 1;
+    background-color: cadetblue;
+  }
+  #navBar > button:hover
+  {
+    background-color: white;
+    color: steelblue;
+  }
+  #routerContent
+  {
+    margin-top: 2%;
+  }
+
 </style>
