@@ -1,6 +1,6 @@
 <template>
     <b-container>
-      <b-card title="Work Experience">
+      <b-card title="Related Experience">
         <b-row>
           <b-col>
             <h3 class="jobTitle">Systems Technician (Freelance)</h3>

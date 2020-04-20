@@ -17,7 +17,7 @@
             </b-button>
             <b-button @click="openExperience"
                       class="text-center" button>
-              Experience
+              Related Experience
             </b-button>
             <b-button @click="openProjects"
                       class="text-center" button>
