@@ -7,18 +7,17 @@ import VueRouter from 'vue-router';
 
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { faUserSecret } from '@fortawesome/free-solid-svg-icons';
-import { faFontAwesome } from '@fortawesome/free-brands-svg-icons';
-import { faAngry, faFilePdf } from '@fortawesome/free-regular-svg-icons';
+import { faFontAwesome, faLinkedin } from '@fortawesome/free-brands-svg-icons';
+import { faAngry, faEnvelope, faFilePdf } from '@fortawesome/free-regular-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 
 import App from './App.vue';
-import MainPage from './components/MainPage.vue';
 import Project from './components/Projects.vue';
 import Education from './components/Education.vue';
 import Experience from './components/Experience.vue';
 
 
-library.add(faUserSecret, faFontAwesome, faAngry, faFilePdf);
+library.add(faUserSecret, faFontAwesome, faAngry, faFilePdf, faLinkedin, faEnvelope);
 
 // Install BootstrapVue
 Vue.use(BootstrapVue);
@@ -30,11 +29,38 @@ Vue.component('font-awesome-icon', FontAwesomeIcon);
 Vue.config.productionTip = false;
 
 const routes = [
-  { path: '/', component: MainPage },
-  { path: '/home', component: MainPage },
-  { path: '/projects', component: Project },
-  { path: '/education', component: Education },
-  { path: '/experience', component: Experience },
+  {
+    path: '/',
+    component: Education,
+    meta:
+      {
+        title: 'Kyle Wei',
+      },
+  },
+  {
+    path: '/projects',
+    component: Project,
+    meta:
+      {
+        title: 'Kyle Wei',
+      },
+  },
+  {
+    path: '/education',
+    component: Education,
+    meta:
+      {
+        title: 'Kyle Wei',
+      },
+  },
+  {
+    path: '/experience',
+    component: Experience,
+    meta:
+      {
+        title: 'Kyle Wei',
+      },
+  },
 ];
 
 const router = new VueRouter({

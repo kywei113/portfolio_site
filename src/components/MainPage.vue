@@ -12,7 +12,7 @@
           <h4>In a Rush?</h4>
           <p>Click on the following link to download a copy of Kyle Wei's resume.</p>
 
-          <a href="https://1drv.ms/b/s!AmQ7QGGJ_UIEo2OccoQeG74ZfwWa?e=qvyqXR"><font-awesome-icon id="pdfIcon" style="color: red;" :icon="['far', 'file-pdf']" /> Resume</a>
+          <a href="https://1drv.ms/b/s!AmQ7QGGJ_UIEo2OccoQeG74ZfwWa?e=qvyqXR"></a>
 
 
         </b-col>

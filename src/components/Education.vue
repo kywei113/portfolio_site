@@ -74,8 +74,6 @@
               <li>PSQL</li>
             </ul>
           </ul>
-
-
         </b-col>
       </b-row>
 
