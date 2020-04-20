@@ -34,7 +34,7 @@
                   <span>Kyle Wei | <a href="mailto:wei.kyle@gmail.com"><font-awesome-icon class="contactIcon" :icon="['far', 'envelope']" /> wei.kyle@gmail.com</a></span>
                 </b-col>
                 <b-col cols="4" id="linkColumn">
-                  <a href="https://www.linkedin.com/in/kyle-wei/"><font-awesome-icon class="contactIcon" :icon="['fab', 'linkedin']"/>LinkedIn</a>
+                  <a href="https://www.linkedin.com/in/kyle-wei/"><font-awesome-icon class="contactIcon" :icon="['fab', 'linkedin']"/> LinkedIn</a>
                   <a id="resumeIcon" href="https://1drv.ms/b/s!AmQ7QGGJ_UIEo2WVC2Da2W-B9noD?e=o7xHQe"><font-awesome-icon class="contactIcon" id="pdfIcon" style="color: red;" :icon="['far', 'file-pdf']" /> Resume</a>
                 </b-col>
               </b-row>
@@ -101,6 +101,10 @@ export default
   {
     text-align: right;
   }
+  #linkColumn > a
+  {
+    margin: 0 2%;
+  }
 .contactIcon
 {
   font-size: 1.5rem;
@@ -126,7 +130,11 @@ export default
   }
   body
   {
-    background-color: #3b78b3;
+    /*background-color: #3b78b3;*/
+    background-image: url("./assets/images/smBg2.png");
+    background-size: 105vw 105vh;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
   }
   #vueBody
   {

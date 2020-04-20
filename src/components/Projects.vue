@@ -40,7 +40,7 @@
     </b-card>
 
     <b-card>
-      <h3>Nutana Collegiate Server Rack and VoIP Upgrade</h3>
+      <h3>Nutana Collegiate Server Rack and VoIP Upgrade <a href="https://twitter.com/SPSD_IT/status/1165011962163605504"><font-awesome-icon id="twitterIcon" :icon="['fab','twitter-square']"/></a></h3>
       <b-row algn-h="between">
         <b-col cols="8">
           <ul>
@@ -112,4 +112,9 @@ export default {
   {
 
   }
+  #twitterIcon
+  {
+    font-size: 2rem;
+  }
+
 </style>

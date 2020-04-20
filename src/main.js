@@ -7,7 +7,7 @@ import VueRouter from 'vue-router';
 
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { faUserSecret } from '@fortawesome/free-solid-svg-icons';
-import { faFontAwesome, faLinkedin } from '@fortawesome/free-brands-svg-icons';
+import { faFontAwesome, faLinkedin, faTwitterSquare } from '@fortawesome/free-brands-svg-icons';
 import { faAngry, faEnvelope, faFilePdf } from '@fortawesome/free-regular-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 
@@ -17,7 +17,7 @@ import Education from './components/Education.vue';
 import Experience from './components/Experience.vue';
 
 
-library.add(faUserSecret, faFontAwesome, faAngry, faFilePdf, faLinkedin, faEnvelope);
+library.add(faUserSecret, faFontAwesome, faAngry, faFilePdf, faLinkedin, faEnvelope, faTwitterSquare);
 
 // Install BootstrapVue
 Vue.use(BootstrapVue);
