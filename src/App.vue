@@ -1,52 +1,44 @@
 <template>
-    <b-container id="vueBody">
-
       <b-row>
         <b-col>
-          <b-img id="headerImage" class="img-fluid w-100" :src="require('./assets/images/mmbRange.jpg')"></b-img>
+          <b-navbar type="light" toggleable="lg" fixed="top">
+            <b-navbar-brand id="navBrand" disabled>
+              <h4>Kyle Wei</h4>
+            </b-navbar-brand>
+
+            <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
+
+            <b-collapse id="nav-collapse" is-nav>
+              <b-navbar-nav>
+                <b-nav-item to="about">About Kyle</b-nav-item>
+                <b-nav-item to="experience">Experience</b-nav-item>
+                <b-nav-item to="projects">Projects</b-nav-item>
+                <b-nav-item id="resumeLink" href="https://1drv.ms/b/s!AmQ7QGGJ_UIEo2WVC2Da2W-B9noD?e=o7xHQe" target="_blank" rel="noopener noreferrer">
+                  Resume
+                </b-nav-item>
+
+                <b-nav-form id="contactForm">
+                  <b-nav-item href="mailto:wei.kyle@gmail.com" target="_blank" rel="noopener noreferrer">
+                    <font-awesome-icon id="emailIcon" class="contactIcon" :icon="['far', 'envelope']" />
+                  </b-nav-item>
+
+                  <b-nav-item href="https://www.linkedin.com/in/kyle-wei/" target="_blank" rel="noopener noreferrer">
+                    <font-awesome-icon id="linkedinIcon" class="contactIcon" :icon="['fab', 'linkedin']"/>
+                  </b-nav-item>
+                </b-nav-form>
+              </b-navbar-nav>
+
+              <b-navbar-nav class="ml-auto">
+
+              </b-navbar-nav>
+            </b-collapse>
+          </b-navbar>
+
+          <transition name="content-fade" mode="out-in">
+            <router-view id="routerContent"></router-view>
+          </transition>
         </b-col>
       </b-row>
-
-
-      <b-row>
-        <b-col>
-          <b-list-group horizontal id="navBar">
-            <b-button @click="openEducation"
-                      class="text-center" button>
-              About Kyle
-            </b-button>
-            <b-button @click="openExperience"
-                      class="text-center" button>
-              Related Experience
-            </b-button>
-            <b-button @click="openProjects"
-                      class="text-center" button>
-              Projects
-            </b-button>
-          </b-list-group>
-        </b-col>
-      </b-row>
-
-      <b-container>
-            <b-card id="contactCard">
-              <b-row align-h="between">
-                <b-col cols="4">
-                  <span>Kyle Wei | <a href="mailto:wei.kyle@gmail.com"><font-awesome-icon class="contactIcon" :icon="['far', 'envelope']" /> wei.kyle@gmail.com</a></span>
-                </b-col>
-                <b-col cols="4" id="linkColumn">
-                  <a href="https://www.linkedin.com/in/kyle-wei/"><font-awesome-icon class="contactIcon" :icon="['fab', 'linkedin']"/> LinkedIn</a>
-                  <a id="resumeIcon" href="https://1drv.ms/b/s!AmQ7QGGJ_UIEo2WVC2Da2W-B9noD?e=o7xHQe"><font-awesome-icon class="contactIcon" id="pdfIcon" style="color: red;" :icon="['far', 'file-pdf']" /> Resume</a>
-                </b-col>
-              </b-row>
-            </b-card>
-      </b-container>
-
-      <b-row>
-        <b-col>
-          <router-view id="routerContent"></router-view>
-        </b-col>
-      </b-row>
-    </b-container>
 </template>
 
 <script>
@@ -88,80 +80,95 @@ export default
 </script>
 
 <style>
+  @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&family=Poppins:wght@500&family=Raleway&display=swap');
+
+  body
+  {
+    background-image: url("assets/images/creampaper.png");
+    font-family: 'Open Sans', sans-serif;
+  }
   /*Body Styles*/
-  #headCol
+  h1, h2, h3, h4
   {
-    background-image: url("./assets/images/mmbRange.jpg");
-    background-size: 100% 100%;
-    height: 25vh;
-    width: 900px;
-    padding:0;
-  }
-  #linkColumn
-  {
-    text-align: right;
-  }
-  #linkColumn > a
-  {
-    margin: 0 2%;
+    font-family: 'Poppins', sans-serif;
   }
 .contactIcon
 {
-  font-size: 1.5rem;
-
+  font-size: 2rem;
 }
-#contactCard
+nav
 {
-  margin-bottom: 0;
+  background-color:whitesmoke;
+  background: linear-gradient(90deg, rgba(245,245,245,1) 20%, rgba(102,220,240,1) 80%, rgba(45,216,251,1) 100%);
+  box-shadow: 3px 3px 8px;
+}
+
+.navbar-light .navbar-nav .nav-link
+{
+  font-family: 'Raleway', 'Open Sans', sans-serif;
+  color: black;
+}
+
+.navbar-light:hover .navbar-nav:hover .nav-link:hover
+{
+  font-family: 'Raleway', 'Open Sans', sans-serif;
+  color: black;
+  text-decoration: underline;
+}
+
+#resumeLink
+{
+  color: grey;
+}
+#resumeLink:hover
+{
+  color: black;
+}
+#resumeCloudIcon
+{
+  color: dodgerblue;
+}
+#emailIcon
+{
+  /*background-color: whitesmoke;*/
+  color: red;
+}
+#linkedinIcon
+{
+
+  /*background-color: whitesmoke;*/
+  color: dodgerblue;
 }
   .card
   {
-    margin-top: 1%;
-    margin-bottom: 1%;
+    margin-top: 2%;
+    margin-bottom: 2%;
     box-shadow: 3px 3px 8px;
+    border-radius: 20px;
+    background-color: rgba(245,245,245, 0.7);
   }
   .card-body
   {
-    padding: 0.5rem;
+    padding: 2em;
+    background-color: rgba(245,245,245, 0.7);
+    border-radius: 20px;
+
   }
   h3
   {
     font-size: 1.1rem;
   }
-  body
-  {
-    /*background-color: #3b78b3;*/
-    background-image: url("./assets/images/smBg2.png");
-    background-size: 105vw 105vh;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-  }
-  #vueBody
-  {
-    background-color: lightgrey;
-    padding: 0;
-    padding-bottom: 1%;
-    box-shadow: 10px 10px 15px;
-  }
-
-  /*Nav Bar Styles*/
-  #navBar
-  {
-    justify-content: center;
-  }
-  #navBar > button
-  {
-    flex-grow: 1;
-    background-color: cadetblue;
-  }
-  #navBar > button:hover
-  {
-    background-color: white;
-    color: steelblue;
-  }
   #routerContent
   {
-    margin-top: 0;
+    padding-top: 6rem;
   }
 
+  .content-fade-enter-active, .content-fade-leave-active {
+    transition: opacity .4s ease;
+    transition-delay: .1s;
+  }
+  .content-fade-enter, .content-fade-leave-to
+  {
+    opacity: 0;
+  }
 </style>

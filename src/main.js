@@ -6,18 +6,18 @@ import VueRouter from 'vue-router';
 
 
 import { library } from '@fortawesome/fontawesome-svg-core';
-import { faUserSecret } from '@fortawesome/free-solid-svg-icons';
+import { faCloud, faUserSecret } from '@fortawesome/free-solid-svg-icons';
 import { faFontAwesome, faLinkedin, faTwitterSquare } from '@fortawesome/free-brands-svg-icons';
 import { faAngry, faEnvelope, faFilePdf } from '@fortawesome/free-regular-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 
 import App from './App.vue';
 import Project from './components/Projects.vue';
-import Education from './components/Education.vue';
+import About from './components/About.vue';
 import Experience from './components/Experience.vue';
 
 
-library.add(faUserSecret, faFontAwesome, faAngry, faFilePdf, faLinkedin, faEnvelope, faTwitterSquare);
+library.add(faUserSecret, faFontAwesome, faAngry, faFilePdf, faLinkedin, faEnvelope, faTwitterSquare, faCloud);
 
 // Install BootstrapVue
 Vue.use(BootstrapVue);
@@ -31,10 +31,10 @@ Vue.config.productionTip = false;
 const routes = [
   {
     path: '/',
-    component: Education,
+    component: About,
     meta:
       {
-        title: 'Kyle Wei',
+        title: 'Kyle Wei - About',
       },
   },
   {
@@ -42,15 +42,15 @@ const routes = [
     component: Project,
     meta:
       {
-        title: 'Kyle Wei',
+        title: 'Kyle Wei - Projects',
       },
   },
   {
-    path: '/education',
-    component: Education,
+    path: '/about',
+    component: About,
     meta:
       {
-        title: 'Kyle Wei',
+        title: 'Kyle Wei - About',
       },
   },
   {
@@ -58,7 +58,7 @@ const routes = [
     component: Experience,
     meta:
       {
-        title: 'Kyle Wei',
+        title: 'Kyle Wei - Experience',
       },
   },
 ];

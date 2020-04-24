@@ -47,7 +47,7 @@
       <b-card title="Volunteer Work">
         <b-row>
           <b-col>
-            <h3 class="jobTitle">Technical Mentor |<span class="jobLoc">Canada Learning Code</span></h3>
+            <h3 class="jobTitle">Technical Mentor | <span class="jobLoc">Canada Learning Code</span></h3>
             <p class="jobTime">February 29, 2020</p>
             <ul>
               <li>Volunteered as a Technical Mentor at the Teens Learning Code: HTML & CSS workshop</li>
@@ -55,7 +55,7 @@
               <li>Worked with other mentors and session organizers to provide a safe, learning environment</li>
             </ul>
 
-            <h3 class="jobTitle">Instructor Aide/Tutor |<span class="jobLoc">Saskatchewan Polytechnic</span></h3>
+            <h3 class="jobTitle">Instructor Aide/Tutor | <span class="jobLoc">Saskatchewan Polytechnic</span></h3>
             <p class="jobTime">Winter 2020</p>
             <ul>
               <li>Tutoring two first year Computer Systems Technology students</li>
@@ -63,7 +63,7 @@
               <li>Creating a weekly meeting schedule that fit both students' schedules</li>
             </ul>
 
-            <h3 class="jobTitle">Junior Football Coach |<span class="jobLoc">Centennial Collegiate</span></h3>
+            <h3 class="jobTitle">Junior Football Coach | <span class="jobLoc">Centennial Collegiate</span></h3>
             <p class="jobTime">Fall 2012, Fall 2013</p>
             <ul>
               <li>Coached the Defensive Line unit comprised of Grade 9 and 10 students</li>
