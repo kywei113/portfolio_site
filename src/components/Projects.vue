@@ -1,8 +1,9 @@
 <template>
   <b-container>
-    <b-card title="Projects">
+    <b-card class="pageTitle" title="Projects">
       <b-row>
         <b-col lg>
+          <p class="editTime">Last edited: April 27, 2020</p>
           <h3>Cans4Cosmo Recycling Application</h3>
           <b-row>
             <b-col>

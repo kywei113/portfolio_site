@@ -1,8 +1,9 @@
 <template>
     <b-container>
-      <b-card title="Related Experience">
+      <b-card class="pageTitle" title="Related Experience">
         <b-row>
           <b-col>
+            <p class="editTime">Last edited: April 27, 2020</p>
             <h3 class="jobTitle">Systems Technician (Freelance)</h3>
             <p class="jobTime">February 2020 -> Present </p>
             <ul>

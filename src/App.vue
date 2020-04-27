@@ -1,5 +1,5 @@
 <template>
-      <b-row align-h="start" id="contentRow" class="mr-lg-5">
+      <b-row align-h="center" id="contentRow" class="mr-lg-5">
         <b-col lg>
           <b-navbar type="light" toggleable="lg" fixed="top">
             <b-navbar-brand id="navBrand" disabled>
@@ -31,9 +31,11 @@
           <transition name="content-fade" mode="out-in">
             <router-view id="routerContent"></router-view>
           </transition>
-        </b-col>
 
+          <p id="createdTag">Created by: Kyle Wei</p>
+        </b-col>
       </b-row>
+
 </template>
 
 <script>
@@ -164,5 +166,22 @@ h3
 {
   opacity: 0;
 }
+#createdTag
+{
+  text-align: center;
+  color:grey;
+}
+.editTime
+{
+  font-size: 0.75rem;
+  color:grey;
+  padding-bottom: 1%;
+}
+
+.pageTitle > div > h4
+{
+  margin-bottom: 0;
+}
+
 
 </style>
