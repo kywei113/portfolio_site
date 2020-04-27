@@ -64,7 +64,44 @@
         </b-col>
 
         <b-col id="ntcImage" lg>
-          <b-img class="img-fluid" thumbnail center :src="require('../assets/images/ntc_standRack.jpg')"></b-img>
+          <b-carousel
+            id="ntcCarousel"
+            v-model="slide"
+            :interval="5000"
+            controls
+            indicators
+            img-height="400"
+            img-width="650"
+            background="#dfdfdf"
+            style="text-shadow: 1px 1px 2px #333;"
+            @sliding-start="onSlideStart"
+            @sliding-end="onSlideEnd"
+          >
+            <b-carousel-slide>
+              <template v-slot:img>
+                <b-img class="img-fluid" :height="400" center :src="require('../assets/images/ntc_standRack.jpg')"></b-img>
+              </template>
+            </b-carousel-slide>
+
+            <b-carousel-slide>
+              <template v-slot:img>
+                <b-img class="img-fluid" :height="400" center :src="require('../assets/images/ntcSPSTwitter.png')"></b-img>
+              </template>
+            </b-carousel-slide>
+
+            <b-carousel-slide>
+              <template v-slot:img>
+                <b-img class="img-fluid" :height="400" center :src="require('../assets/images/ntcTwitterImg1.jpg')"></b-img>
+              </template>
+            </b-carousel-slide>
+
+            <b-carousel-slide>
+              <template v-slot:img>
+                <b-img class="img-fluid" :height="400" center :src="require('../assets/images/ntcTwitterImg2.jpg')"></b-img>
+              </template>
+            </b-carousel-slide>
+          </b-carousel>
+<!--          <b-img class="img-fluid" thumbnail center :src="require('../assets/images/ntc_standRack.jpg')"></b-img>-->
         </b-col>
       </b-row>
     </b-card>
@@ -93,12 +130,20 @@ export default {
   name: 'Projects',
   data() {
     return {
-
+      slide: 0,
+      sliding: null,
     };
   },
   methods:
     {
-
+      // eslint-disable-next-line no-unused-vars
+      onSlideStart(slide) {
+        this.sliding = true;
+      },
+      // eslint-disable-next-line no-unused-vars
+      onSlideEnd(slide) {
+        this.sliding = false;
+      },
     },
 };
 </script>

@@ -19,7 +19,7 @@
         <b-col md class="mt-sm-3">
           <b-list-group>
             <b-list-group-item>
-              <h3>Systems</h3>
+              <h3 class="skillHeader">Systems</h3>
               <b-list-group flush>
                 <b-list-group-item>
                   <h3>Domain and System Management</h3>
@@ -55,7 +55,7 @@
         <b-col md class="mt-sm-3">
           <b-list-group>
             <b-list-group-item>
-              <h3>Development Languages</h3>
+              <h3 class="skillHeader">Development Languages</h3>
               <b-list-group flush>
                 <b-list-group-item>
                   <h3>Programming</h3>
@@ -118,9 +118,6 @@
             </ul>
           </ul>
         </b-col>
-        <b-col lg>
-          <b-img id="spImg" shadow thumbnail center class="img-fluid w-75" rounded :src="require('../assets/images/splogo.jpg')"></b-img>
-        </b-col>
       </b-row>
 
       <b-row class="mt-5">
@@ -135,9 +132,6 @@
             </ul>
           </ul>
         </b-col>
-        <b-col lg>
-          <b-img id="uofsImg" shadow thumbnail center class="img-fluid" rounded :src="require('../assets/images/uofslogo.jpg')"></b-img>
-        </b-col>
 
       </b-row>
     </b-card>
@@ -151,10 +145,10 @@ export default {
 </script>
 
 <style scoped>
-  .edTitle
-  {
-    font-size: 1.05em;
-  }
+.edTitle
+{
+  font-size: 1.05em;
+}
 
 #spProg, #uosProg
 {
@@ -164,5 +158,10 @@ export default {
 #langList > li, #sysList > li
 {
   margin-top: 1%;
+}
+
+.skillHeader
+{
+  padding-top: 3%;
 }
 </style>

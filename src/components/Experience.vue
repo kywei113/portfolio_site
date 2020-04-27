@@ -86,12 +86,10 @@ export default {
 <style scoped>
 .jobTitle
 {
-  font-weight: bold;
   margin-bottom: 0;
 }
 .jobLoc
 {
-  font-weight: normal;
   font-style: italic;
 }
 .jobTime

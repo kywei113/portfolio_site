@@ -1,13 +1,11 @@
 <template>
-      <b-row>
-        <b-col>
+      <b-row align-h="start" id="contentRow" class="mr-lg-5">
+        <b-col lg>
           <b-navbar type="light" toggleable="lg" fixed="top">
             <b-navbar-brand id="navBrand" disabled>
-              <h4>Kyle Wei</h4>
+              <h4 id="brandHeader">Kyle Wei</h4>
             </b-navbar-brand>
-
             <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
-
             <b-collapse id="nav-collapse" is-nav>
               <b-navbar-nav>
                 <b-nav-item to="about">About Kyle</b-nav-item>
@@ -16,20 +14,16 @@
                 <b-nav-item id="resumeLink" href="https://1drv.ms/b/s!AmQ7QGGJ_UIEo2WVC2Da2W-B9noD?e=o7xHQe" target="_blank" rel="noopener noreferrer">
                   Resume
                 </b-nav-item>
-
                 <b-nav-form id="contactForm">
                   <b-nav-item href="mailto:wei.kyle@gmail.com" target="_blank" rel="noopener noreferrer">
                     <font-awesome-icon id="emailIcon" class="contactIcon" :icon="['far', 'envelope']" />
                   </b-nav-item>
-
                   <b-nav-item href="https://www.linkedin.com/in/kyle-wei/" target="_blank" rel="noopener noreferrer">
                     <font-awesome-icon id="linkedinIcon" class="contactIcon" :icon="['fab', 'linkedin']"/>
                   </b-nav-item>
                 </b-nav-form>
               </b-navbar-nav>
-
               <b-navbar-nav class="ml-auto">
-
               </b-navbar-nav>
             </b-collapse>
           </b-navbar>
@@ -38,6 +32,7 @@
             <router-view id="routerContent"></router-view>
           </transition>
         </b-col>
+
       </b-row>
 </template>
 
@@ -84,7 +79,13 @@ export default
 
   body
   {
-    background-image: url("assets/images/creampaper.png");
+    max-width: 98vw;
+    /*background-image: url("assets/images/circuit-gradient-side.png"), url("assets/images/creampaper.png");*/
+    background-image: url("assets/images/circuit-lightgrey.png"), url("assets/images/creampaper.png");
+    background-repeat: no-repeat, repeat;
+    background-position: right center, center center;
+    background-size: auto, auto;
+    background-attachment: fixed;
     font-family: 'Open Sans', sans-serif;
   }
   /*Body Styles*/
@@ -99,8 +100,8 @@ export default
 nav
 {
   background-color:whitesmoke;
-  background: linear-gradient(90deg, rgba(245,245,245,1) 20%, rgba(102,220,240,1) 80%, rgba(45,216,251,1) 100%);
-  box-shadow: 3px 3px 8px;
+  /*background: linear-gradient(90deg, rgba(255,255,255,1) 44%, rgba(77,212,235,1) 70%, rgba(0,42,99,1) 100%);*/
+  box-shadow: 1px 1px 5px;
 }
 
 .navbar-light .navbar-nav .nav-link
@@ -115,7 +116,10 @@ nav
   color: black;
   text-decoration: underline;
 }
-
+#brandHeader
+{
+  color:dodgerblue;
+}
 #resumeLink
 {
   color: grey;
@@ -124,51 +128,41 @@ nav
 {
   color: black;
 }
-#resumeCloudIcon
-{
-  color: dodgerblue;
-}
 #emailIcon
 {
-  /*background-color: whitesmoke;*/
-  color: red;
+  color: dodgerblue;
 }
 #linkedinIcon
 {
-
-  /*background-color: whitesmoke;*/
   color: dodgerblue;
 }
-  .card
-  {
-    margin-top: 2%;
-    margin-bottom: 2%;
-    box-shadow: 3px 3px 8px;
-    border-radius: 20px;
-    background-color: rgba(245,245,245, 0.7);
-  }
-  .card-body
-  {
-    padding: 2em;
-    background-color: rgba(245,245,245, 0.7);
-    border-radius: 20px;
+.card
+{
+  margin-top: 2%;
+  margin-bottom: 3%;
+  box-shadow: 1px 1px 2px
+}
+.card-body
+{
+  padding: 2em;
+  background-color: ghostwhite;
 
-  }
-  h3
-  {
-    font-size: 1.1rem;
-  }
-  #routerContent
-  {
-    padding-top: 6rem;
-  }
+}
+h3
+{
+  font-size: 1.1rem;
+}
+#routerContent
+{
+  padding-top: 6rem;
+}
+.content-fade-enter-active, .content-fade-leave-active {
+  transition: opacity .4s ease;
+  transition-delay: .1s;
+}
+.content-fade-enter, .content-fade-leave-to
+{
+  opacity: 0;
+}
 
-  .content-fade-enter-active, .content-fade-leave-active {
-    transition: opacity .4s ease;
-    transition-delay: .1s;
-  }
-  .content-fade-enter, .content-fade-leave-to
-  {
-    opacity: 0;
-  }
 </style>
