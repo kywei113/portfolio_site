@@ -49,7 +49,7 @@
 
       <b-row align-h="between">
         <b-col>
-          <h3>Nutana Collegiate Server Rack and VoIP Upgrade <a href="https://twitter.com/SPSD_IT/status/1165011962163605504"><font-awesome-icon id="twitterIcon" :icon="['fab','twitter-square']"/></a></h3>
+          <h3>Nutana Collegiate Server Rack and VoIP Upgrade</h3>
           <b-row>
             <b-col lg>
               <ul>
@@ -72,7 +72,7 @@
             indicators
             img-height="400"
             img-width="650"
-            background="#dfdfdf"
+            background="#efefef"
             style="text-shadow: 1px 1px 2px #333;"
             @sliding-start="onSlideStart"
             @sliding-end="onSlideEnd"
@@ -149,6 +149,11 @@ export default {
 </script>
 
 <style scoped>
+  #ntcCarousel
+  {
+    border: 1px solid lightgrey;
+  }
+
   h3
   {
     font-size: 1.25rem;
